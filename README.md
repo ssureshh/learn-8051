@@ -1,12 +1,12 @@
 # Learning micro-controllers from scratch series, Part-1, The 8051
 ## Table of content
-- [Introduction]()
+- [Introduction](https://github.com/ssureshh/learn-8051#introduction)
 - [My setup, the bare minimum]()
-- [MacOS Setup]()
+- [MacOS Setup](https://github.com/ssureshh/learn-8051#macos-setup)
 - [Linux Setup]()
 - Programs/Experiments/Tests
-	- [0 - C program blink test]()
-	- [1 - Assembly test]()
+	- [0 - C program blink test](https://github.com/ssureshh/learn-8051/tree/main/0_blink)
+	- [1 - Assembly test](https://github.com/ssureshh/learn-8051/tree/main/1_assembly_test)
 
 
 ## Introduction
@@ -14,6 +14,7 @@
 - Most probably will try to code the project in assembly, apart from C programming
 - Will use the SDCC compile suite. All the codes written in this repo is compiled, assembled and linked with the SDCC suite.
 
+## Setup
 ## MacOS Setup
 - Download the SDCC compile package for MacOS
 - Unzip the downloaded package
