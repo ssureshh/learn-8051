@@ -1,5 +1,18 @@
 # Learning micro-controllers from scratch series, Part-1, The 8051
+## Table of content
+- [Introduction]()
+- [My setup, the bare minimum]()
+- [MacOS Setup]()
+- [Linux Setup]()
+- Programs/Experiments/Tests
+	- [0 - C program blink test]()
+	- [1 - Assembly test]()
 
+
+## Introduction
+- Goal is to build a complete project with the 8051
+- Most probably will try to code the project in assembly, apart from C programming
+- Will use the SDCC compile suite. All the codes written in this repo is compiled, assembled and linked with the SDCC suite.
 
 ## MacOS Setup
 - Download the SDCC compile package for MacOS
@@ -48,4 +61,8 @@ total 280
 -rw-r--r--  1 suresh  staff   3.5K Mar 25 21:54 blink.rel
 -rw-r--r--  1 suresh  staff    23K Mar 25 21:54 blink.rst
 -rw-r--r--  1 suresh  staff    38K Mar 25 21:54 blink.sym
+```
+- Flash with avrdude
+```bash
+$ avrdude -c stk500v1 -P /dev/tty.usbmodem14201 -b 19200 -C +8051-52-avrdude.conf -p AT89S52 -e -U flash:w:blink.ihx:i
 ```

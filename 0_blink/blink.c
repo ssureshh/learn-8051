@@ -31,6 +31,6 @@ void delay(void){
     // so that we get some delay
     // this code does not do any useful work :()
 
-    for(i=0;i<0xff;i++) //outer loop 0-255
+    for(i=0;i<0xee;i++) //outer loop 0-255
          for(j=0;j<0xff;j++); // inner loop 0-255
 }

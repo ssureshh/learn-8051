@@ -1,0 +1,19 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 1.
+Hexadecimal [24-Bits]
+
+
+
+      000000 B2 90            [12]    1 START: CPL P1.0
+      000002 00 0E            [12]    2        ACALL WAIT  
+      000004 B2 90            [12]    3        CPL P1.0
+      000006 B2 93            [12]    4        CPL P1.3
+      000008 00 0E            [12]    5        ACALL WAIT
+      00000A B2 93            [12]    6        CPL P1.3  
+      00000C 80 F2            [24]    7        SJMP START
+      00000E 7C 05            [12]    8 WAIT:MOV R4,#0x05
+      000010 7B 00            [12]    9 WAIT1:MOV R3,#0x00
+      000012 7A 00            [12]   10 WAIT2:MOV R2,#0x00
+      000014 DA FE            [24]   11 WAIT3:DJNZ R2,WAIT3
+      000016 DB FA            [24]   12        DJNZ R3,WAIT2
+      000018 DC F6            [24]   13        DJNZ R4,WAIT1
+      00001A 22               [24]   14        RET

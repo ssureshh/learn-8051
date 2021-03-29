@@ -345,7 +345,7 @@
                                     345 ;	 function delay
                                     346 ;	-----------------------------------------
       00006E                        347 _delay:
-                                    348 ;	blink.c:34: for(i=0;i<0xff;i++) //outer loop 0-255
+                                    348 ;	blink.c:34: for(i=0;i<0xee;i++) //outer loop 0-255
       00006E 7E 00            [12]  349 	mov	r6,#0x00
       000070 7F 00            [12]  350 	mov	r7,#0x00
                                     351 ;	blink.c:35: for(j=0;j<0xff;j++); // inner loop 0-255
@@ -360,14 +360,14 @@
       00007B EC               [12]  360 	mov	a,r4
       00007C 4D               [12]  361 	orl	a,r5
       00007D 70 F7            [24]  362 	jnz	00105$
-                                    363 ;	blink.c:34: for(i=0;i<0xff;i++) //outer loop 0-255
+                                    363 ;	blink.c:34: for(i=0;i<0xee;i++) //outer loop 0-255
       00007F 0E               [12]  364 	inc	r6
       000080 BE 00 01         [24]  365 	cjne	r6,#0x00,00126$
       000083 0F               [12]  366 	inc	r7
       000084                        367 00126$:
       000084 C3               [12]  368 	clr	c
       000085 EE               [12]  369 	mov	a,r6
-      000086 94 FF            [12]  370 	subb	a,#0xff
+      000086 94 EE            [12]  370 	subb	a,#0xee
       000088 EF               [12]  371 	mov	a,r7
       000089 64 80            [12]  372 	xrl	a,#0x80
       00008B 94 80            [12]  373 	subb	a,#0x80

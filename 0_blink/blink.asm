@@ -345,7 +345,7 @@ _main:
 ;	 function delay
 ;	-----------------------------------------
 _delay:
-;	blink.c:34: for(i=0;i<0xff;i++) //outer loop 0-255
+;	blink.c:34: for(i=0;i<0xee;i++) //outer loop 0-255
 	mov	r6,#0x00
 	mov	r7,#0x00
 ;	blink.c:35: for(j=0;j<0xff;j++); // inner loop 0-255
@@ -360,14 +360,14 @@ _delay:
 	mov	a,r4
 	orl	a,r5
 	jnz	00105$
-;	blink.c:34: for(i=0;i<0xff;i++) //outer loop 0-255
+;	blink.c:34: for(i=0;i<0xee;i++) //outer loop 0-255
 	inc	r6
 	cjne	r6,#0x00,00126$
 	inc	r7
 00126$:
 	clr	c
 	mov	a,r6
-	subb	a,#0xff
+	subb	a,#0xee
 	mov	a,r7
 	xrl	a,#0x80
 	subb	a,#0x80
